@@ -1,0 +1,59 @@
+// Base styles for large screens (Desktop First)
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  padding: 1.5rem;
+}
+
+.grid-item {
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  background-color: #dedede;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+@media (max-width: 920px) {
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .grid-item {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    border-color: #357ABD;
+  }
+}
+
+@media (max-width: 756px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .grid-item {
+    background-color: #5AAF6C;
+    color: #FFFFFF;
+    border-color: #48904F;
+  }
+}
+@media (max-width: 460px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-item {
+    background-color: #D9534F;
+    color: #FFFFFF;
+    border-color: #C9302C;
+  }
+}
